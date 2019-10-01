@@ -26,6 +26,8 @@ public class MainActvity extends AppCompatActivity {
 
         BottomNavigationView bottomNavigationView=findViewById(R.id.bottom_nav);
         bottomNavigationView.setOnNavigationItemSelectedListener(navigationListener);
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragments_container, new timetable_fragment());
+        bottomNavigationView.setSelectedItemId(R.id.timetable);
         bottomNavigationView.setOnNavigationItemReselectedListener(new BottomNavigationView.OnNavigationItemReselectedListener() {
             @Override
             public void onNavigationItemReselected(@NonNull MenuItem menuItem) {
