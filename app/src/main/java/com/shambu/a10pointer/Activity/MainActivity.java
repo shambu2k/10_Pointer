@@ -16,7 +16,7 @@ import com.shambu.a10pointer.Fragments.polls_fragment;
 import com.shambu.a10pointer.Fragments.timetable_fragment;
 import com.shambu.a10pointer.R;
 
-public class MainActvity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
