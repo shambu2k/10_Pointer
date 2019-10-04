@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "729339477712",
+    "firebase_url": "https://pointer-eca6b.firebaseio.com",
+    "project_id": "pointer-eca6b",
+    "storage_bucket": "pointer-eca6b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:729339477712:android:df6394938d4412e0eaa8d5",
+        "android_client_info": {
+          "package_name": "com.shambu.a10pointer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "729339477712-7i3nlhd204rs64ghf3takrasaa8jg1ah.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.shambu.a10pointer",
+            "certificate_hash": "6f6d23d6a493df0159346baa566ae1488a84120b"
+          }
+        },
+        {
+          "client_id": "729339477712-ldrbtmr4jr2ujej2cjvdrgpnruqv9q66.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRIzByxoEnsfB0N7LWzcaE6h7MILsD70I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "729339477712-ldrbtmr4jr2ujej2cjvdrgpnruqv9q66.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

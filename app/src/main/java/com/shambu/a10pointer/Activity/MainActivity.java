@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
                     selected_fragment=new attendance_fragment();
                     break;
                 case R.id.polls:
-                    selected_fragment=new polls_fragment();
+                    selected_fragment=new polls_fragment(MainActivity.this);
                     break;
                 case R.id.groupchat:
                     selected_fragment=new grpchat_fragment();

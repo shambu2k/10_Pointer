@@ -4,13 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     tools:context=".Activity.MainActivity">
 
-    <TextView
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Polls"
-        android:textSize="30sp"
-        android:layout_centerInParent="true"/>
+
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_add_white_24dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="15dp"
+        android:backgroundTint="@color/colorAccent"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/polls_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
 
 </RelativeLayout>
