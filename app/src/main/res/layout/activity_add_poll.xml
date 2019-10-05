@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/txt_input_pollHeading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Poll heading"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginStart="15dp"/>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_input_pollOpt1"
+            android:layout_width="200dp"
+            android:hint="Option 1"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginStart="15dp"/>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_input_pollOpt2"
+            android:layout_width="200dp"
+            android:hint="Option 2"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginStart="15dp"/>
+
+
+
+        <ToggleButton
+            android:id="@+id/poll_status_toggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="ToggleButton"
+            android:textOff="Not Active" />
+
+        <Button
+            android:id="@+id/addPoll_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="Add Poll"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

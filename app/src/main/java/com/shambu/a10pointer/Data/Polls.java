@@ -1,16 +1,20 @@
 package com.shambu.a10pointer.Data;
 
 public class Polls {
-    private String pollHeading, activeStatus, pollOpt1, pollOpt2;
+
+    public String pollHeading;
+    public String pollStatus;
+    public String pollOpt1;
+    public String pollOpt2;
 
     public Polls() {
     }
 
-    public Polls(String poll_heading, String active_status, String poll_opt_1, String poll_opt_2) {
-        this.pollHeading = poll_heading;
-        this.activeStatus = active_status;
-        this.pollOpt1 = poll_opt_1;
-        this.pollOpt2 = poll_opt_2;
+    public Polls(String pollHeading, String pollStatus, String pollOpt1, String pollOpt2) {
+        this.pollHeading = pollHeading;
+        this.pollStatus = pollStatus;
+        this.pollOpt1 = pollOpt1;
+        this.pollOpt2 = pollOpt2;
     }
 
     public String getPollHeading() {
@@ -21,12 +25,12 @@ public class Polls {
         this.pollHeading = pollHeading;
     }
 
-    public String getActiveStatus() {
-        return activeStatus;
+    public String getPollStatus() {
+        return pollStatus;
     }
 
-    public void setActiveStatus(String activeStatus) {
-        this.activeStatus = activeStatus;
+    public void setPollStatus(String pollStatus) {
+        this.pollStatus = pollStatus;
     }
 
     public String getPollOpt1() {

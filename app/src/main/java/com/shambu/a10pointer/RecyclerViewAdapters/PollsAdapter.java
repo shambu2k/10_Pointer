@@ -33,13 +33,13 @@ public class PollsAdapter extends RecyclerView.Adapter<PollsAdapter.PollViewHold
     @Override
     public void onBindViewHolder(@NonNull PollViewHolder holder, int position) {
         holder.poll_heading.setText(polls.get(position).getPollHeading());
-        holder.poll_status.setText(polls.get(position).getActiveStatus());
+        holder.poll_status.setText(polls.get(position).getPollStatus());
         holder.opt1.setText(polls.get(position).getPollOpt1());
         holder.opt2.setText(polls.get(position).getPollOpt2());
-//        if (polls.get(position).getActiveStatus().equals("Not Active"))
-  //      {
-    //        holder.poll_status.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_poll_not_active_red_24dp,0,0,0);
-      //  }else holder.poll_status.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_poll_active_green_24dp,0,0,0);
+        if (polls.get(position).getPollStatus().equals("Not Active"))
+        {
+            holder.poll_status.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_poll_not_active_red_24dp,0,0,0);
+        }else holder.poll_status.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_poll_active_green_24dp,0,0,0);
 
     }
 
