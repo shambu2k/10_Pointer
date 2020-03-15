@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -29,11 +30,11 @@ import java.util.ArrayList;
 
 public class polls_fragment extends Fragment {
 
-    DatabaseReference polls_reference;
-    RecyclerView polls_recycler;
-    PollsAdapter pollsAdapter;
-    ArrayList<Polls> polls;
-    Context context;
+    private DatabaseReference polls_reference;
+    private RecyclerView polls_recycler;
+    private PollsAdapter pollsAdapter;
+    private ArrayList<Polls> polls;
+    private Context context;
 
     public polls_fragment(Context context) {
         this.context = context;
@@ -52,7 +53,7 @@ public class polls_fragment extends Fragment {
         polls=new ArrayList<Polls>();
 
         polls_reference= FirebaseDatabase.getInstance().getReference(Constants.polls);
-        polls_reference.child("Poll 1").child("pollHeading").setValue("This is the first Poll ever.");
+        /*polls_reference.child("Poll 1").child("pollHeading").setValue("This is the first Poll ever.");
         polls_reference.child("Poll 1").child("pollStatus").setValue("Not Active");
         polls_reference.child("Poll 1").child("pollOpt1").setValue("Thats cool");
         polls_reference.child("Poll 1").child("pollOpt2").setValue("Not bad");
@@ -60,8 +61,10 @@ public class polls_fragment extends Fragment {
         polls_reference.child("Poll 2").child("pollHeading").setValue("How is the Poll UI");
         polls_reference.child("Poll 2").child("pollStatus").setValue("Active");
         polls_reference.child("Poll 2").child("pollOpt1").setValue("Good");
-        polls_reference.child("Poll 2").child("pollOpt2").setValue("Has a lot of room for improvement");
+        polls_reference.child("Poll 2").child("pollOpt2").setValue("Has a lot of room for improvement");*/
         //polls_reference= FirebaseDatabase.getInstance().getReference(Constants.polls);
+
+
         polls_reference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -77,15 +80,23 @@ public class polls_fragment extends Fragment {
                     polls.add(poll);
                 }
 
+
                 pollsAdapter=new PollsAdapter(context,polls);
                 polls_recycler.setAdapter(pollsAdapter);
             }
 
+
+
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
+                Toast.makeText(context, databaseError.getMessage(), Toast.LENGTH_SHORT).show();
+
             }
         });
+
+
+
 
         return view;
 
@@ -97,9 +108,11 @@ public class polls_fragment extends Fragment {
         public void onClick(View view) {
             Intent addPoll=new Intent(context, AddPoll.class);
             startActivity(addPoll);
+            Toast.makeText(context, "clicked", Toast.LENGTH_SHORT).show();
 
         }
     };
+
 
 
 }

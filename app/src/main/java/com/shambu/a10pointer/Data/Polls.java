@@ -6,15 +6,27 @@ public class Polls {
     public String pollStatus;
     public String pollOpt1;
     public String pollOpt2;
+    public String pollId;
+
+
 
     public Polls() {
     }
 
-    public Polls(String pollHeading, String pollStatus, String pollOpt1, String pollOpt2) {
+    public Polls(String pollHeading, String pollStatus, String pollOpt1, String pollOpt2, String PollId) {
         this.pollHeading = pollHeading;
         this.pollStatus = pollStatus;
         this.pollOpt1 = pollOpt1;
         this.pollOpt2 = pollOpt2;
+        this.pollId=PollId;
+    }
+
+    public String getPollId() {
+        return pollId;
+    }
+
+    public void setPollId(String pollId) {
+        this.pollId = pollId;
     }
 
     public String getPollHeading() {

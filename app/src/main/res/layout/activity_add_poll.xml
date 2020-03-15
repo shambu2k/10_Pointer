@@ -3,6 +3,12 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.core.widget.NestedScrollView>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -10,6 +16,17 @@
         android:orientation="vertical">
 
 
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_input_pollName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Poll name"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginStart="15dp"/>
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/txt_input_pollHeading"
@@ -43,14 +60,14 @@
             android:layout_marginStart="15dp"/>
 
 
-
         <ToggleButton
             android:id="@+id/poll_status_toggle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:text="ToggleButton"
-            android:textOff="Not Active" />
+            android:textOff="Not Active"
+            android:textOn="Active" />
 
         <Button
             android:id="@+id/addPoll_button"
@@ -60,6 +77,7 @@
             android:layout_marginTop="20dp"
             android:background="@color/colorPrimaryDark"
             android:text="Add Poll"
+
             android:textColor="@color/white"
             android:textStyle="bold"/>
 

@@ -17,16 +17,22 @@
         android:gravity="center"
         android:orientation="vertical">
 
+
+
+
         <TextView
             android:id="@+id/pollHeading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="10dp"
+
             android:paddingBottom="10dp"
             android:text="Poll heading"
+            android:padding="15dp"
             android:textColor="@color/black"
             android:textSize="30sp"
             android:textStyle="bold" />
+
 
         <TextView
             android:id="@+id/poll_status"
@@ -66,14 +72,15 @@
         </RadioGroup>
 
         <Button
+            android:id="@+id/poll_submit_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
             android:background="@color/colorPrimary"
             android:text="Submit"
-            android:textColor="@color/white"
-            android:layout_marginRight="5dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginBottom="5dp"/>
+            android:textColor="@color/white" />
 
 
     </LinearLayout>
